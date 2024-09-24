@@ -9,7 +9,7 @@ jobs:
               run: sudo apt install cowsay -y 
 
             - name: Execute cowsay CMD
-              run: cowsay -f draong "RUN for cover, I'm a Dragon" >> dragon.txt
+              run: cowsay -f dragon "RUN for cover, I'm a Dragon" >> dragon.txt
 
             - name: Upload Dragon text file
               uses: actions/upload-artifact@v3
@@ -37,7 +37,7 @@ jobs:
               uses: actions/download-artifact@v3
               with: 
                 path: dragon.txt
-                
+
             - name: Read File
               run: cat dragon.txt
             
